@@ -2,100 +2,116 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Interaktives Ausmalbild – Sonnenuntergang</title>
+<title>Sterne Ausmalbild</title>
 
 <style>
   body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
     text-align: center;
-    margin: 0;
-    padding: 20px;
-  }
-
-  h1 {
-    margin-bottom: 10px;
+    background: #f5f5f5;
   }
 
   .palette {
-    margin-bottom: 15px;
+    margin: 20px;
   }
 
-  .color {
-    width: 30px;
-    height: 30px;
+  .farbe {
+    width: 40px;
+    height: 40px;
     display: inline-block;
     cursor: pointer;
-    border: 2px solid #000;
-    margin: 3px;
+    border: 2px solid #333;
+    margin: 5px;
   }
 
   svg {
-    max-width: 90vw;
+    max-width: 90%;
     height: auto;
     background: white;
+    border: 2px solid black;
   }
 
-  /* 👉 Linien bleiben schwarz */
-  path {
-    cursor: pointer;
-    stroke: #000 !important;
-    stroke-width: 0.7;
+  .malbar {
     fill: white;
+    stroke: black;
+    cursor: pointer;
   }
 </style>
 </head>
 
 <body>
 
-<h1>🎨 Sonnenuntergang – Ausmalbild</h1>
+<h1>⭐ Sterne Ausmalbild</h1>
 
 <div class="palette">
-  <div class="color" style="background:red"    data-color="red"></div>
-  <div class="color" style="background:orange" data-color="orange"></div>
-  <div class="color" style="background:yellow" data-color="yellow"></div>
-  <div class="color" style="background:green"  data-color="green"></div>
-  <div class="color" style="background:blue"   data-color="blue"></div>
-  <div class="color" style="background:purple" data-color="purple"></div>
+  <div class="farbe" style="background:red" onclick="setFarbe('red')"></div>
+  <div class="farbe" style="background:blue" onclick="setFarbe('blue')"></div>
+  <div class="farbe" style="background:green" onclick="setFarbe('green')"></div>
+  <div class="farbe" style="background:yellow" onclick="setFarbe('yellow')"></div>
+  <div class="farbe" style="background:orange" onclick="setFarbe('orange')"></div>
+  <div class="farbe" style="background:black" onclick="setFarbe('black')"></div>
+  <div class="farbe" style="background:white" onclick="setFarbe('white')"></div>
 </div>
 
-<!-- ===== DEIN SVG (UNVERÄNDERT) ===== -->
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 210 297"
-   xmlns="http://www.w3.org/2000/svg">
+<!-- DEIN SVG – INTERAKTIV GEMACHT -->
+<svg viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
 
-<!-- 👉 ALLE deine <path>-Elemente -->
-<!-- Ich habe sie NICHT verändert -->
-<!-- GitHub Pages akzeptiert das so -->
+  <rect class="malbar" onclick="male(this)"
+    x="3.4378402" y="20.154369"
+    width="101.05428" height="119.6622" />
 
-<!-- BEGIN SVG -->
-<!-- (Dein kompletter SVG-Code bleibt hier exakt so wie geschickt) -->
+  <path class="malbar" onclick="male(this)"
+    d="M 133.87578,144.69978 95.703856,132.32024 63.865644,156.74721
+       63.843511,116.61806 30.77354,93.886472 68.931782,81.464836
+       80.331628,42.988976 103.93685,75.441124 144.05231,74.393327
+       120.4829,106.87149 Z"
+    transform="matrix(0.69021968,0,0,0.7168944,-6.3923393,7.0854837)" />
 
-<!-- WICHTIG:
-     Falls GitHub die XML-Zeile oben meckert,
-     kannst du die erste <?xml ...?> Zeile löschen,
-     alles andere bleibt gleich.
--->
+  <rect class="malbar" onclick="male(this)"
+    x="3.436837" y="139.9718"
+    width="101.05428" height="119.6622" />
 
-<!-- END SVG -->
+  <path class="malbar" onclick="male(this)"
+    d="M 133.87578,144.69978 95.703856,132.32024 63.865644,156.74721
+       63.843511,116.61806 30.77354,93.886472 68.931782,81.464836
+       80.331628,42.988976 103.93685,75.441124 144.05231,74.393327
+       120.4829,106.87149 Z"
+    transform="matrix(0.69021968,0,0,0.7168944,-6.3933395,126.90289)" />
+
+  <rect class="malbar" onclick="male(this)"
+    x="104.77739" y="140.03233"
+    width="101.05428" height="119.6622" />
+
+  <path class="malbar" onclick="male(this)"
+    d="M 133.87578,144.69978 95.703856,132.32024 63.865644,156.74721
+       63.843511,116.61806 30.77354,93.886472 68.931782,81.464836
+       80.331628,42.988976 103.93685,75.441124 144.05231,74.393327
+       120.4829,106.87149 Z"
+    transform="matrix(0.69021968,0,0,0.7168944,94.94719,126.96345)" />
+
+  <rect class="malbar" onclick="male(this)"
+    x="104.6944" y="20.211908"
+    width="101.05428" height="119.6622" />
+
+  <path class="malbar" onclick="male(this)"
+    d="M 133.87578,144.69978 95.703856,132.32024 63.865644,156.74721
+       63.843511,116.61806 30.77354,93.886472 68.931782,81.464836
+       80.331628,42.988976 103.93685,75.441124 144.05231,74.393327
+       120.4829,106.87149 Z"
+    transform="matrix(0.69021968,0,0,0.7168944,94.864212,7.1430003)" />
 
 </svg>
 
 <script>
-  let selectedColor = "red";
+  let aktuelleFarbe = "red";
 
-  document.querySelectorAll(".color").forEach(c => {
-    c.addEventListener("click", () => {
-      selectedColor = c.dataset.color;
-    });
-  });
+  function setFarbe(farbe) {
+    aktuelleFarbe = farbe;
+  }
 
-  document.querySelectorAll("svg path").forEach(p => {
-    p.addEventListener("click", () => {
-      p.style.fill = selectedColor;
-    });
-  });
+  function male(element) {
+    element.style.fill = aktuelleFarbe;
+  }
 </script>
 
 </body>
